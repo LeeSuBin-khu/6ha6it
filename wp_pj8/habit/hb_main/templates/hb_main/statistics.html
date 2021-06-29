@@ -1,0 +1,84 @@
+<html>
+<head>
+<title>statics</title>
+{% load static %}
+<style type="text/css">
+#body {
+background: white url("background.jpg") repeat;
+}
+#calendar {
+width: 310px;
+border-radius: 5px;
+-moz-border-radius: 5px;
+}
+#calendar table {
+border-collapse: collapse;
+background-color: white;
+margin: 10px auto;
+font-size: 18px;
+padding: 0px
+border= 0px;
+}
+td, th {
+width: 40px;
+height: 40px;
+text-align: center;
+vertical-align: middle;
+color: #444;
+position: relative;
+}
+th {
+height: 20px;
+font-weight: bold;
+font-size: 14px;
+}
+th.month {
+text-align: center;
+}
+td {
+border: 1px solid white;
+}
+td.noday {
+border: 0px;
+}
+td:hover {
+color: #222;
+}
+td.action_day {
+color:#21b7d5;;
+font-weight: bold;
+}
+</style>
+</head>
+<body>
+<div id="calendar" style="float: left;"><table class="month">
+<tr><th colspan="7" class="month">June 2021</th></tr>
+<tr><th class="sun">Sun</th><th class="mon">Mon</th><th class="tue">Tue</th><th class="wed">Wed</th><th class="thu">Thu</th><th class="fri">Fri</th><th class="sat">Sat</th></tr>
+<tr><td class="noday">&nbsp;</td><td class="noday">&nbsp;</td><td class="tue">1</td><td class="wed">2</td><td class="thu">3</td><td class="fri">4</td><td class="sat">5</td></tr>
+<tr><td class="sun">6</td><td class="mon">7</td><td class="tue">8</td><td class="wed">9</td><td class="thu">10</td><td class="fri">11</td><td class="sat">12</td></tr>
+<tr><td class="sun">13</td><td class="mon">14</td><td class="tue">15</td><td class="wed">16</td><td class="thu">17</td><td class="fri">18</td><td class="sat">19</td></tr>
+<tr><td class="sun">20</td><td class="mon">21</td><td class="tue">22</td><td class="wed">23</td><td class="thu">24</td><td class="fri">25</td><td class="sat">26</td></tr>
+<tr><td class="sun">27</td><td class="mon">28</td><td class="tue">29</td><td class="wed">30</td><td class="noday">&nbsp;</td><td class="noday">&nbsp;</td><td class="noday">&nbsp;</td></tr>
+</table>
+<table class="month">
+<tr><th colspan="7" class="month">July 2021</th></tr>
+<tr><th class="sun">Sun</th><th class="mon">Mon</th><th class="tue">Tue</th><th class="wed">Wed</th><th class="thu">Thu</th><th class="fri">Fri</th><th class="sat">Sat</th></tr>
+<tr><td class="noday">&nbsp;</td><td class="noday">&nbsp;</td><td class="noday">&nbsp;</td><td class="noday">&nbsp;</td><td class="thu">1</td><td class="fri">2</td><td class="sat">3</td></tr>
+<tr><td class="sun">4</td><td class="mon">5</td><td class="tue">6</td><td class="wed">7</td><td class="thu">8</td><td class="fri">9</td><td class="sat">10</td></tr>
+<tr><td class="sun">11</td><td class="mon">12</td><td class="tue">13</td><td class="wed">14</td><td class="thu">15</td><td class="fri">16</td><td class="sat">17</td></tr>
+<tr><td class="sun">18</td><td class="mon">19</td><td class="tue">20</td><td class="wed">21</td><td class="thu">22</td><td class="fri">23</td><td class="sat">24</td></tr>
+<tr><td class="sun">25</td><td class="mon">26</td><td class="tue">27</td><td class="wed">28</td><td class="thu">29</td><td class="fri">30</td><td class="sat">31</td></tr>
+</table>
+<table class="month">
+<tr><th colspan="7" class="month">August 2021</th></tr>
+<tr><th class="sun">Sun</th><th class="mon">Mon</th><th class="tue">Tue</th><th class="wed">Wed</th><th class="thu">Thu</th><th class="fri">Fri</th><th class="sat">Sat</th></tr>
+<tr><td class="sun">1</td><td class="mon">2</td><td class="tue">3</td><td class="wed">4</td><td class="thu">5</td><td class="fri">6</td><td class="sat">7</td></tr>
+<tr><td class="sun">8</td><td class="mon">9</td><td class="tue">10</td><td class="wed">11</td><td class="thu">12</td><td class="fri">13</td><td class="sat">14</td></tr>
+<tr><td class="sun">15</td><td class="mon">16</td><td class="tue">17</td><td class="wed">18</td><td class="thu">19</td><td class="fri">20</td><td class="sat">21</td></tr>
+<tr><td class="sun">22</td><td class="mon">23</td><td class="tue">24</td><td class="wed">25</td><td class="thu">26</td><td class="fri">27</td><td class="sat">28</td></tr>
+<tr><td class="sun">29</td><td class="mon">30</td><td class="tue">31</td><td class="noday">&nbsp;</td><td class="noday">&nbsp;</td><td class="noday">&nbsp;</td><td class="noday">&nbsp;</td></tr>
+</table>
+</div>
+<img src="{% static 'hb_main/image/savefig_day.png' %}"><img src="{% static 'hb_main/image/savefig_week.png' %}">
+</body>
+</html>

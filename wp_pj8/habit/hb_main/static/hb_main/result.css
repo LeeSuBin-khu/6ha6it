@@ -1,0 +1,75 @@
+@font-face {
+    font-family: 'hand_font';
+    src: url("font/crayong.TTF");
+}
+body {
+    background: white url("image/background.jpg") repeat;
+    font-size:100px;
+    margin-top: 3%;
+}
+#app-name
+{
+    font-family: hand_font;
+    color:hsl(0, 0%, 39%);
+    font-size:34%;
+    text-align: left;
+}
+table {
+    width: 100%;
+    font-size:15%;
+    border-top: 1px solid #444444;
+    border-collapse: collapse;
+  }
+  th, td {
+    border-bottom: 1px solid #444444;
+    padding: 10px;
+  }
+#text2
+{
+    margin-top: 23%;
+}
+.text-text
+{
+    font-family: hand_font;
+    color:hsl(0, 0%, 13%);
+    font-size:30%;
+    text-align: left;
+    margin-top: 10%;
+}
+#add
+{
+    font-family: hand_font;
+    font-size:50%;
+    font-weight: bolder;
+    text-shadow: 0 0 0px;
+}
+a:link { text-decoration: none; text-shadow: 0 0 24px; color : #21b7d5;}
+a:visited {color : #21b7d5;}
+
+#link2:link
+{
+    color:#444444
+}
+#link2:visited
+{
+    color:#444444
+}
+#add:link{
+    color:rgb(0, 0, 0);
+}
+#add:visited{
+    color:rgb(0, 0, 0);
+}
+img {
+    max-width: 100%;
+    height: auto !important;
+  }
+.btn
+{
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+}

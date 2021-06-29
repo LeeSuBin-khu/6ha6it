@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>삭제</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'hb_main/deleting.css' %}">
+</head>
+<body>
+    <div style="text-align: center;">
+    <h1>삭제되었습니다</h1>
+    <a href="{% url 'hb_main:result' %}" id="go_habit">back</a>
+</div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+@font-face {
+    font-family: 'hand_font';
+    src: url("font/crayong.TTF");
+}
+body {
+    background: white url("image/main_background.jpg") repeat;
+    font-family: hand_font;
+    color:#505050;
+    font-size:170px;
+    text-align: left;
+    margin-left: 5%;
+}
+#famous
+{
+    color:hsl(0, 0%, 27%);
+    font-size:20%;
+    text-align: left;
+    margin-top: -10%;
+}
+#dr
+{
+    color:hsl(0, 0%, 41%);
+    font-size:15%;
+    text-align: left;
+    margin-top: -3.5%;
+    margin-bottom: -1%;
+}
+#go_habit
+{
+        background-color:transparent;
+        border-radius:19px;
+        display:inline-block;
+        cursor:pointer;
+        color:#21b7d5;
+        font-family:Arial;
+        font-size:10%;
+        font-weight:bold;
+        padding:13px 32px;
+        text-decoration:none;
+        border:0;
+        outline:0;
+        text-shadow:0px 0px 0px #ffffff;
+}
+#go_habit:hover {
+    background-color:transparent;
+}
+#go_habit:active {
+    position:relative;
+    top:1px;
+}
+#intro
+{
+    color:hsl(0, 0%, 51%);
+    font-family: Arial;
+    font-weight: 540;
+    font-size:11%;
+    text-align: left;
+    margin-top: 10%;
+    margin-bottom: -12%;
+    margin-left: 1%;
+}

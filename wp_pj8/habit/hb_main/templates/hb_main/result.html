@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>습관</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'hb_main/result.css' %}">
+</head>
+<body>
+    <div class="container" style="width:35%;float:left;margin-left: 10%;">
+        <p id="app-name">6ha6it'</p>
+        <p class="text-text">진행 중인 습관</p>
+        <table class="table1">
+            <thead>
+            <tr>
+                <td><B>이름</B></td>
+                <td><B>실천</B></td>
+                <td><B>삭제</B></td>
+                <td><B>수정</B></td>
+            </tr>
+            </thead>
+            <tbody>
+            {% for habit in habits %}
+            <tr>
+                <td>
+                    <form action="/statistics/{{habit.id}}/" method="GET">
+                        {% csrf_token %}
+                        <a href="/statistics/{{habit.id}}/" name="statistics" value="{{habit.id}}">{{habit.name}}</a>
+                    </form>
+                </td>
+                <td>
+                    <form action="{% url 'hb_main:doit' %}" method="POST">
+                        {% csrf_token %}
+                        <button name="true" value="{{habit.id}}" class="btn">
+                            <img src="{% static 'hb_main/image/yes.png' %}" style="width: 30px; height: 30px;">
+                        </button>
+                    </form>
+                </td>
+                <td>
+                    <form action="{% url 'hb_main:deleting' %}" method="POST">
+                        {% csrf_token %}
+                        <button name="del_habit2" value="{{habit.name}}" class="btn">
+                            <img src="{% static 'hb_main/image/del.png' %}" style="width: 30px; height: 30px;">
+                        </button>
+                    </form>
+                </td>
+                <td>
+                    <form action="/updating/{{habit.id}}/" method="GET">
+                        {% csrf_token %}
+                        <button name="up_habit" value="{{habit.id}}" class="btn">
+                            <img src="{% static 'hb_main/image/update.png' %}" style="width: 30px; height: 30px;">
+                        </button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        <a href="{% url 'hb_main:adding' %}" id="add">+</a>
+        </div>
+        <div class="container" style="width:35%;float:right;margin-right: 10%;">
+        <p class="text-text" id="text2">완료된 습관</p>
+        <table class="table2">
+            <thead>
+                <tr>
+                    <td><B>이름</B></td>
+                    <td><B>삭제</B></td>
+                </tr>
+                </thead>
+                <tbody>
+                    {% for end_habit in end_habits %}
+                    <tr>
+                        <td>
+                            <form action="/statistics2/{{end_habit.id}}/" method="GET">
+                                {% csrf_token %}
+                                <a href="/statistics2/{{end_habit.id}}/" name="statistics" value="{{end_habit.id}}" id="link2">{{end_habit.name}}</a>
+                            </form>
+                        </td>
+                        <td>
+                            <form action="{% url 'hb_main:deleting' %}" method="POST">
+                                {% csrf_token %}
+                                <button name="del_habit" value="{{end_habit.name}}" class="btn">
+                                    <img src="{% static 'hb_main/image/del.png' %}" style="width: 30px; height: 30px;">
+                                </button>
+                            </form>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+        </table>
+    </div>
+</body>
+</html>

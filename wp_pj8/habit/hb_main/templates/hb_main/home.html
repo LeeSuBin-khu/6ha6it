@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <title>홈</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'hb_main/home.css' %}">
+</head>
+<body>
+    <div class="container">
+    <p id="intro">66일 습관 형성 프로젝트<br><br></p>
+    <p>6ha6it'</p>
+    <p id="famous">"새로운 행동에 대한 거부감이 사라지는 데는<br> 평균 21일이 습관으로 만들어지는 데는 66일이 걸린다"<br><br></p>
+    <p id="dr">- 필리파 렐리 박사 </p>    
+    </div>
+    <a href="{% url 'hb_main:result' %}"><button id="go_habit">습관 만들기 →</button></a>
+</body>
+</html>

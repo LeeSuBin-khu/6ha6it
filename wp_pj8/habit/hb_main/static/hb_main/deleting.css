@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'hand_font';
+    src: url("font/crayong.TTF");
+}
+body {
+    background: white url("image/background.jpg") repeat;
+    font-size:30px;
+    margin-top: 3%;
+}

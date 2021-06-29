@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>수정 페이지입니다.</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'hb_main/updating.css' %}">
+</head>
+<body>
+    <div style="text-align: center;">
+    <form action={% url 'hb_main:updating' %} method="POST">
+        {% csrf_token %}
+        <input placeholder="습관을 입력하세요" name="name" style="height: 20px; width: 300px;"/>
+        <input placeholder="시작일: ex)2021-05-27" name="start_day" style="height: 20px; width: 300px;"/>
+        <input placeholder="실천일을 입력하세요" name="action_day" style="height: 20px; width: 300px;"/>
+        <input placeholder="실천하지 않은 날을 입력하세요" name="no_action_day" style="height: 20px; width: 300px;"/>
+        <button name="up_habit" type="submit" value="{{habit.name}}" id="update">습관 수정 →</button>
+    </form>
+    </div>
+</body>
+</html>
