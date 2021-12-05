@@ -12,6 +12,8 @@ from . import HTMLCalendar
 import calendar
 from . import statistic_html
 import pytz
+import sys
+import os
 
 def home(request): #함수로 구현
     return render(request, 'hb_main/home.html')
@@ -89,7 +91,10 @@ def statistics(request, habit_id): #*
                         w1.cell(num,2).value="True" #실천 여부 추가
         wb.save(file)
         html_file=statistic_html.make_html()
-        data=pandas.read_excel("C:\\Users\\subin\\Desktop\\wp_pj8\\habit\\day.xlsx") #엑셀 데이터 읽기
+        dir = os.path.dirname(os.path.realpath('day.xlsx'))
+        temp = dir + '\\day.xlsx'
+        data=pandas.read_excel(temp) #엑셀 데이터 읽기
+        # data=pandas.read_excel("C:\\Users\\subin\\Desktop\\habitt\\6ha6it\\wp_pj8\\habit\\day.xlsx") #엑셀 데이터 읽기
         data=pandas.DataFrame(data)
         htmlCalendar = HTMLCalendar.HTMLCalendar(calendar.SUNDAY)
         month_action=list() #엑셀에 있는 날짜 문자열에서 월 정수형 정보 중복없이 가져오기
@@ -142,7 +147,10 @@ def statistics2(request, habit_id):
                         w1.cell(num,2).value="True" #실천 여부 추가
         wb.save(file)
         html_file=statistic_html.make_html()
-        data=pandas.read_excel("C:\\Users\\subin\\Desktop\\wp_pj8\\habit\\day.xlsx") #엑셀 데이터 읽기
+        dir = os.path.dirname(os.path.realpath('day.xlsx'))
+        temp = dir + '\\day.xlsx'
+        data=pandas.read_excel(temp) #엑셀 데이터 읽기
+        # data=pandas.read_excel("\\6ha6it\\wp_pj8\\habit\\day.xlsx") #엑셀 데이터 읽기
         data=pandas.DataFrame(data)
         htmlCalendar = HTMLCalendar.HTMLCalendar(calendar.SUNDAY)
         month_action=list() #엑셀에 있는 날짜 문자열에서 월 정수형 정보 중복없이 가져오기

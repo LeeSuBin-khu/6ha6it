@@ -6,8 +6,9 @@
 #body {
 background: white url("background.jpg") repeat;
 }
+.stat-body{background: url("../../static/hb_main/image/background.jpg")}
 #calendar {
-width: 310px;
+
 border-radius: 5px;
 -moz-border-radius: 5px;
 }
@@ -20,24 +21,23 @@ padding: 0px
 border= 0px;
 }
 td, th {
-width: 40px;
-height: 40px;
+
 text-align: center;
 vertical-align: middle;
 color: #444;
 position: relative;
 }
 th {
-height: 20px;
+
 font-weight: bold;
 font-size: 14px;
-}
-th.month {
+border: 1px solid #444444;}
+tbody{width: 40px;}th.month {
 text-align: center;
 }
 td {
-border: 1px solid white;
-}
+border: 1px solid #444444;
+ width: 40px;}
 td.noday {
 border: 0px;
 }
@@ -50,35 +50,36 @@ font-weight: bold;
 }
 </style>
 </head>
-<body>
-<div id="calendar" style="float: left;"><table class="month">
-<tr><th colspan="7" class="month">June 2021</th></tr>
+<body class="stat-body">
+<div id="calendar" style="display:flex; margin-left: 330px"><table class="month" style="margin-left: -100px; background:transparent;border: 1px solid #444444;border-collapse: collapse;width: 300px; height: 300px;">
+<tr><th colspan="7" class="month">September 2021</th></tr>
 <tr><th class="sun">Sun</th><th class="mon">Mon</th><th class="tue">Tue</th><th class="wed">Wed</th><th class="thu">Thu</th><th class="fri">Fri</th><th class="sat">Sat</th></tr>
-<tr><td class="noday">&nbsp;</td><td class="noday">&nbsp;</td><td class="tue">1</td><td class="wed">2</td><td class="thu">3</td><td class="fri">4</td><td class="sat">5</td></tr>
-<tr><td class="sun">6</td><td class="mon">7</td><td class="tue">8</td><td class="wed">9</td><td class="thu">10</td><td class="fri">11</td><td class="sat">12</td></tr>
-<tr><td class="sun">13</td><td class="mon">14</td><td class="tue">15</td><td class="wed">16</td><td class="thu">17</td><td class="fri">18</td><td class="sat">19</td></tr>
-<tr><td class="sun">20</td><td class="mon">21</td><td class="tue">22</td><td class="wed">23</td><td class="thu">24</td><td class="fri">25</td><td class="sat">26</td></tr>
-<tr><td class="sun">27</td><td class="mon">28</td><td class="tue">29</td><td class="wed">30</td><td class="noday">&nbsp;</td><td class="noday">&nbsp;</td><td class="noday">&nbsp;</td></tr>
+<tr><td class="noday">&nbsp;</td><td class="noday">&nbsp;</td><td class="noday">&nbsp;</td><td class="action_day wed">1</td><td class="action_day thu">2</td><td class="action_day fri">3</td><td class="action_day sat">4</td></tr>
+<tr><td class="sun">5</td><td class="mon">6</td><td class="action_day tue">7</td><td class="wed">8</td><td class="thu">9</td><td class="fri">10</td><td class="action_day sat">11</td></tr>
+<tr><td class="action_day sun">12</td><td class="mon">13</td><td class="tue">14</td><td class="wed">15</td><td class="action_day thu">16</td><td class="fri">17</td><td class="sat">18</td></tr>
+<tr><td class="action_day sun">19</td><td class="mon">20</td><td class="action_day tue">21</td><td class="action_day wed">22</td><td class="action_day thu">23</td><td class="action_day fri">24</td><td class="action_day sat">25</td></tr>
+<tr><td class="action_day sun">26</td><td class="action_day mon">27</td><td class="action_day tue">28</td><td class="wed">29</td><td class="action_day thu">30</td><td class="noday">&nbsp;</td><td class="noday">&nbsp;</td></tr>
 </table>
-<table class="month">
-<tr><th colspan="7" class="month">July 2021</th></tr>
+<table class="month" style="margin-left: -100px; background:transparent;border: 1px solid #444444;border-collapse: collapse;width: 300px; height: 300px;">
+<tr><th colspan="7" class="month">October 2021</th></tr>
 <tr><th class="sun">Sun</th><th class="mon">Mon</th><th class="tue">Tue</th><th class="wed">Wed</th><th class="thu">Thu</th><th class="fri">Fri</th><th class="sat">Sat</th></tr>
-<tr><td class="noday">&nbsp;</td><td class="noday">&nbsp;</td><td class="noday">&nbsp;</td><td class="noday">&nbsp;</td><td class="thu">1</td><td class="fri">2</td><td class="sat">3</td></tr>
-<tr><td class="sun">4</td><td class="mon">5</td><td class="tue">6</td><td class="wed">7</td><td class="thu">8</td><td class="fri">9</td><td class="sat">10</td></tr>
-<tr><td class="sun">11</td><td class="mon">12</td><td class="tue">13</td><td class="wed">14</td><td class="thu">15</td><td class="fri">16</td><td class="sat">17</td></tr>
-<tr><td class="sun">18</td><td class="mon">19</td><td class="tue">20</td><td class="wed">21</td><td class="thu">22</td><td class="fri">23</td><td class="sat">24</td></tr>
-<tr><td class="sun">25</td><td class="mon">26</td><td class="tue">27</td><td class="wed">28</td><td class="thu">29</td><td class="fri">30</td><td class="sat">31</td></tr>
+<tr><td class="noday">&nbsp;</td><td class="noday">&nbsp;</td><td class="noday">&nbsp;</td><td class="noday">&nbsp;</td><td class="noday">&nbsp;</td><td class="action_day fri">1</td><td class="action_day sat">2</td></tr>
+<tr><td class="sun">3</td><td class="mon">4</td><td class="action_day tue">5</td><td class="wed">6</td><td class="thu">7</td><td class="action_day fri">8</td><td class="sat">9</td></tr>
+<tr><td class="sun">10</td><td class="action_day mon">11</td><td class="tue">12</td><td class="wed">13</td><td class="thu">14</td><td class="fri">15</td><td class="action_day sat">16</td></tr>
+<tr><td class="action_day sun">17</td><td class="action_day mon">18</td><td class="action_day tue">19</td><td class="wed">20</td><td class="action_day thu">21</td><td class="fri">22</td><td class="sat">23</td></tr>
+<tr><td class="sun">24</td><td class="mon">25</td><td class="action_day tue">26</td><td class="action_day wed">27</td><td class="action_day thu">28</td><td class="action_day fri">29</td><td class="action_day sat">30</td></tr>
+<tr><td class="sun">31</td><td class="noday">&nbsp;</td><td class="noday">&nbsp;</td><td class="noday">&nbsp;</td><td class="noday">&nbsp;</td><td class="noday">&nbsp;</td><td class="noday">&nbsp;</td></tr>
 </table>
-<table class="month">
-<tr><th colspan="7" class="month">August 2021</th></tr>
+<table class="month" style="margin-left: -100px; background:transparent;border: 1px solid #444444;border-collapse: collapse;width: 300px; height: 300px;">
+<tr><th colspan="7" class="month">November 2021</th></tr>
 <tr><th class="sun">Sun</th><th class="mon">Mon</th><th class="tue">Tue</th><th class="wed">Wed</th><th class="thu">Thu</th><th class="fri">Fri</th><th class="sat">Sat</th></tr>
-<tr><td class="sun">1</td><td class="mon">2</td><td class="tue">3</td><td class="wed">4</td><td class="thu">5</td><td class="fri">6</td><td class="sat">7</td></tr>
-<tr><td class="sun">8</td><td class="mon">9</td><td class="tue">10</td><td class="wed">11</td><td class="thu">12</td><td class="fri">13</td><td class="sat">14</td></tr>
-<tr><td class="sun">15</td><td class="mon">16</td><td class="tue">17</td><td class="wed">18</td><td class="thu">19</td><td class="fri">20</td><td class="sat">21</td></tr>
-<tr><td class="sun">22</td><td class="mon">23</td><td class="tue">24</td><td class="wed">25</td><td class="thu">26</td><td class="fri">27</td><td class="sat">28</td></tr>
-<tr><td class="sun">29</td><td class="mon">30</td><td class="tue">31</td><td class="noday">&nbsp;</td><td class="noday">&nbsp;</td><td class="noday">&nbsp;</td><td class="noday">&nbsp;</td></tr>
+<tr><td class="noday">&nbsp;</td><td class="action_day mon">1</td><td class="action_day tue">2</td><td class="action_day wed">3</td><td class="thu">4</td><td class="fri">5</td><td class="sat">6</td></tr>
+<tr><td class="sun">7</td><td class="mon">8</td><td class="tue">9</td><td class="wed">10</td><td class="thu">11</td><td class="fri">12</td><td class="sat">13</td></tr>
+<tr><td class="sun">14</td><td class="mon">15</td><td class="tue">16</td><td class="wed">17</td><td class="thu">18</td><td class="fri">19</td><td class="sat">20</td></tr>
+<tr><td class="sun">21</td><td class="mon">22</td><td class="tue">23</td><td class="wed">24</td><td class="thu">25</td><td class="fri">26</td><td class="sat">27</td></tr>
+<tr><td class="sun">28</td><td class="mon">29</td><td class="tue">30</td><td class="noday">&nbsp;</td><td class="noday">&nbsp;</td><td class="noday">&nbsp;</td><td class="noday">&nbsp;</td></tr>
 </table>
 </div>
-<img src="{% static 'hb_main/image/savefig_day.png' %}"><img src="{% static 'hb_main/image/savefig_week.png' %}">
+<div class="img-container" style="margin-left: 330px;"><img src="{% static 'hb_main/image/savefig_day.png' %}" style="width: 500px; height: 400px;"><img src="{% static 'hb_main/image/savefig_week.png' %}" style="width: 500px; height: 400px;"></div>
 </body>
 </html>

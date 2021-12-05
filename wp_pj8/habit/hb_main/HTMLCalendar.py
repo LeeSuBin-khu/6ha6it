@@ -28,7 +28,7 @@ class HTMLCalendar(HTMLCalendar):
             idx+=1
         action=[]
         v=[]
-        v.append('<table class="month">')
+        v.append('<table class="month" style="margin-left: -100px; background:transparent;border: 1px solid #444444;border-collapse: collapse;width: 300px; height: 300px;">')
         v.append(self.formatmonthname(theyear, themonth, withyear=withyear))
         v.append(self.formatweekheader())
         for week in self.monthdays2calendar(theyear, themonth):
