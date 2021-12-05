@@ -12,6 +12,7 @@
 <img src="https://user-images.githubusercontent.com/72721839/144735298-7ff31370-62c8-44d2-bf23-58bc41293cf3.png" width="580" height="300">
 <img src="https://user-images.githubusercontent.com/72721839/144735346-1fd881af-d6e4-49a3-9236-67fd470acc6e.png" width="580" height="300">
 
+with **Django**.
 </br>
 </br>
 
